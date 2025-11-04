@@ -1,0 +1,268 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #602a9e 0%, #f5f7fa 100%);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  animation: fadeIn 1s ease-in;
+}
+
+.card {
+  background: rgba(3, 3, 3, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 40px 35px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h1 {
+  font-size: 28px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+
+.counter-display h2 {
+  font-size: 48px;
+  color: #4b5bce;
+  margin-bottom: 20px;
+  transition: all 0.2s ease;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #6a5acd, #836fff);
+  color: white;
+}
+
+.btn.primary:hover {
+  background: linear-gradient(135deg, #7b68ee, #9b84ff);
+  box-shadow: 0 4px 15px rgba(123, 104, 238, 0.3);
+}
+
+.btn.secondary {
+  background:  #7b68ee;
+  color: #f2eded;
+}
+
+.btn.secondary:hover {
+  background: #ffffff;
+  color: #000;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+ */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url("https://wallpaperaccess.com/full/6150491.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 350px;
+  text-align: center;
+  color: #2d2d2d;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.title {
+  font-size: 28px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  color: #7c0ab1;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: #5a5a5a;
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+.counter-display h2 {
+  font-size: 48px;
+  margin: 10px 0;
+  color:  #7c0ab1;
+  text-shadow: 0 0 12px rgba(155, 155, 255, 0.5);
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn {
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #9354c6, #fbc2eb);
+}
+
+.btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(241, 184, 255, 0.5);
+}
+
+.btn.secondary {
+  background: linear-gradient(135deg, #ee89fe, #b066ff);
+}
+
+.btn.secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(102, 166, 255, 0.5);
+}
+
+.btn.info {
+  background: linear-gradient(135deg, #b2b3fe, #aa2aff);
+}
+
+.btn.info:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(14, 210, 247, 0.4);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(180, 180, 255, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+  backdrop-filter: blur(8px);
+}
+
+.modal {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 16px;
+  width: 320px;
+  text-align: center;
+  color: #333;
+  box-shadow: 0 4px 20px rgba(180, 180, 255, 0.4);
+  animation: popIn 0.5s ease;
+}
+
+.modal h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #4831d4;
+}
+
+.modal input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.7);
+  color: #333;
+  font-size: 14px;
+  outline: none;
+}
+
+.modal input::placeholder {
+  color: #888;
+}
+
+.modal-btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.btn.save {
+  background: linear-gradient(135deg, #e8b7ff, #8d4de1);
+}
+
+.btn.save:hover {
+  box-shadow: 0 6px 15px rgba(77, 225, 177, 0.4);
+}
+
+.btn.cancel {
+  background: linear-gradient(135deg, #fcb0ff, #d6b2ff);
+}
+
+.btn.cancel:hover {
+  box-shadow: 0 6px 15px rgba(214, 178, 255, 0.5);
+}
+
